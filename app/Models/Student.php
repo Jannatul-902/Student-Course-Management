@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Student extends Model
 {
     use HasFactory;
-    protected $fillable = ['name', 'email'];
+    protected $fillable = ['name', 'email', 'gender'];
     public function courses()
     {
         return $this->belongsToMany(Course::class)->withTimestamps();
